@@ -1,0 +1,3 @@
+[submodule "lambda/boto3"]
+	path = lambda/boto3
+	url = https://github.com/sentilabs01/teacher_one

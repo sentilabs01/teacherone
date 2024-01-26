@@ -37,6 +37,32 @@ class LaunchRequestHandler(AbstractRequestHandler):
         )
 
 
+
+
+#
+#
+#
+
+class TeacherOneIntentHandler(AbstractRequestHandler):
+    """Handler for Teacher One Intent."""
+    def can_handle(self, handler_input):
+        return ask_utils.is_intent_name("TeacherOneIntent")(handler_input)
+
+    def handle(self, handler_input):
+        # Add your logic to handle TeacherOneIntent here
+        speak_output = "Handling Teacher One Intent."
+
+        return (
+            handler_input.response_builder
+                .speak(speak_output)
+                .response
+        )
+
+
+###
+#
+#
+
 class HelloWorldIntentHandler(AbstractRequestHandler):
     """Handler for Hello World Intent."""
     def can_handle(self, handler_input):
@@ -156,6 +182,13 @@ class CatchAllExceptionHandler(AbstractExceptionHandler):
 
 
 sb = SkillBuilder()
+
+#
+sb.add_request_handler(TeacherOneIntentHandler())
+#
+#
+#
+
 
 sb.add_request_handler(LaunchRequestHandler())
 sb.add_request_handler(HelloWorldIntentHandler())
