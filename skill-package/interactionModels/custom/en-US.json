@@ -1,0 +1,49 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "teacher_one",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "name": "TeacherOneIntent",
+          "samples": [
+            "activate {teacher_one}",
+            "ask {teacher_one} a question",
+            "open {teacher_one}"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "teacher one"
+    }
+  }
+}

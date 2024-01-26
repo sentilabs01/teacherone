@@ -1,53 +1,37 @@
 {
-  "interactionModel": {
-      "languageModel": {
-          "invocationName": "teacher one",
-          "intents": [
-              {
-                  "name": "AMAZON.CancelIntent",
-                  "samples": []
-              },
-              {
-                  "name": "AMAZON.HelpIntent",
-                  "samples": []
-              },
-              {
-                  "name": "AMAZON.StopIntent",
-                  "samples": []
-              },
-              {
-                  "name": "HelloWorldIntent",
-                  "slots": [],
-                  "samples": [
-                      "hello",
-                      "how are you",
-                      "say hi world",
-                      "say hi",
-                      "hi",
-                      "say hello world",
-                      "say hello"
-                  ]
-              },
-              {
-                  "name": "TeacherOneIntent",
-                  "slots": [
-                      {
-                          "name": "teacher_one",
-                          "type": "AMAZON.SearchQuery"
-                      }
-                  ],
-                  "samples": [
-                      "activate {teacher_one}",
-                      "ask {teacher_one} a question",
-                      "open {teacher_one}"
-                  ]
-              },
-              {
-                  "name": "AMAZON.NavigateHomeIntent",
-                  "samples": []
-              }
-          ],
-          "types": []
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:211907867180:function:b2c87ee0-2e80-4089-a708-42a0446a743e:Release_0"
+        },
+        "interfaces": [],
+        "locales": {},
+        "regions": {
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:211907867180:function:b2c87ee0-2e80-4089-a708-42a0446a743e:Release_0"
+            }
+          },
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:211907867180:function:b2c87ee0-2e80-4089-a708-42a0446a743e:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:211907867180:function:b2c87ee0-2e80-4089-a708-42a0446a743e:Release_0"
+            }
+          }
+        }
       }
+    },
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "name": "teacher_one"
+        }
+      }
+    }
   }
 }
